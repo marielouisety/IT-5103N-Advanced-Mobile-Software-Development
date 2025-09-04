@@ -25,7 +25,7 @@ export default function HomeScreen() {
         <ThemedText>
           a 3rd-year BSIT student. {"\n\n"}
           This is my first activity for the course IT 5103N - Advanced Mobile Software Development {"\n"}
-          under Mr. Manuel Baricuatro Jr. in the University of San Carlos.
+          under Mr. Manuel Bariquatro Jr. in the University of San Carlos.
         </ThemedText>
       </ThemedView>
     </ParallaxScrollView>

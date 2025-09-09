@@ -21,7 +21,7 @@ Final Output:
 
 **Activity 2: Component Scavenger Hunt**
 
-Objective: Explore and use basic React Native components in a single code
+Objective: Explore and use basic React Native components in a single app
 Instructions: 
 1. Create a new screen called ComponentShowcase.
 2. Use the following components: Text, Button, Image, ScrollView.

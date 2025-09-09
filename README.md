@@ -1,12 +1,11 @@
-React Native Fundamentals
-Activity 1: Development Environment Setup
+**Activity 1: Development Environment Setup**
 
-Objective: Set up your React-Native development environment.
+Objective: Set up your React Native development environment.
 Instructions:
 1. Install Node.js and npm.
-2. Install the React-Native CLI.
+2. Install the React Native CLI.
 3. Set up Android Studio or Xcode for mobile emulation.
-4. Create a new React-Native project using 'npx react-native init MyApp'.
+4. Create a new React Native project using 'npx react-native init MyApp'.
 5. Run the app on an emulator or physical device.
 
 What challenges did you face during setup?
@@ -19,3 +18,21 @@ What challenges did you face during setup?
 Final Output:
 
 <img width="421" height="912" alt="image" src="https://github.com/user-attachments/assets/d3f57588-a0be-4324-ab02-baa62d27af51" />
+
+**Activity 2: Component Scavenger Hunt**
+
+Objective: Explore and use basic React Native components in a single code
+Instructions: 
+1. Create a new screen called ComponentShowcase.
+2. Use the following components: Text, Button, Image, ScrollView.
+3. Style the layout to be clean and readable.
+4. Run the app and ensure all components are visible and functional.
+5. Submit the code and a screenshot of the running app.
+
+Assessment Criteria:
+- all required components used (40%)
+- layout is functional and readablle (30%)
+- app runs without errors (30%)
+
+Final Output:
+

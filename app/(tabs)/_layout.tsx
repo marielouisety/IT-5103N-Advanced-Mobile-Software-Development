@@ -38,6 +38,12 @@ export default function TabLayout() {
           title: '2nd Activity',
         }}
       />
+      <Tabs.Screen
+        name="SpotifyUI"
+        options={{
+          title: '3rd Activity',
+        }}
+      />
     </Tabs>
   );
 }

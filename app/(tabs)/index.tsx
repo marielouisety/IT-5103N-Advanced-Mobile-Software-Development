@@ -10,20 +10,16 @@ import { ThemedView } from '@/components/ThemedView';
 
 import { useFonts, Poppins_400Regular, Poppins_700Bold } from '@expo-google-fonts/poppins';
 
-export default function App() {
+export default function HomeScreen() {
   let [fontsLoaded] = useFonts({
     Poppins_400Regular,
     Poppins_700Bold,
   });
 
   if (!fontsLoaded) {
-    return <ActivityIndicator size="large" color="#0000ff" />;
+    return <ActivityIndicator size="large" color="#0000ff"/>;
   }
 
-  return <HomeScreen />;
-}
-
-function HomeScreen() {
   return (
     <ParallaxScrollView
       headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
@@ -37,7 +33,7 @@ function HomeScreen() {
         <ThemedText type="title" style={{ fontFamily: 'Poppins_700Bold' }}>
           welcome!
         </ThemedText>
-        <HelloWave />
+        <HelloWave/>
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
         <ThemedText type="subtitle" style={{ fontFamily: 'Poppins_700Bold' }}>
@@ -55,7 +51,8 @@ function HomeScreen() {
             Activities
         </ThemedText>
         <View style={styles.linklist}>
-            <Link href="/(tabs)/ComponentShowcase" style={styles.linkText}>•   Activity 2: Components Showcase
+            <Link href="/(tabs)/ComponentShowcase" style={styles.linkText}>
+                •   Activity 2: Components Showcase
             </Link>
         </View>
       </ThemedView>

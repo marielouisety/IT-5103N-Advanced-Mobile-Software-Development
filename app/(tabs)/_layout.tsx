@@ -29,19 +29,19 @@ export default function TabLayout() {
       <Tabs.Screen
         name="index"
         options={{
-          title: '1st Activity',
+          title: 'Introduction',
         }}
       />
       <Tabs.Screen
         name="ComponentShowcase"
         options={{
-          title: '2nd Activity',
+          title: 'Components Showcase',
         }}
       />
       <Tabs.Screen
         name="SpotifyUI"
         options={{
-          title: '3rd Activity',
+          title: 'Spotify UI',
         }}
       />
     </Tabs>

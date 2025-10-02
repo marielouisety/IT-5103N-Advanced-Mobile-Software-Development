@@ -1,16 +1,27 @@
 import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity, Image } from "react-native";
+import { useFonts } from "expo-font";
 
 export default function SpotifyLogin() {
+    const [fontsLoaded] = useFonts({
+        CircularStdMedium: require("@/assets/fonts/circular-std-medium-500.ttf"),
+        CircularStdBold: require("@/assets/fonts/circular-std-4.ttf"),
+    });
+
+    if (!fontsLoaded) {
+        return null;
+    }
+
     return (
         <View style={styles.container}>
         <Image
-            source={require('../../assets/images/whitelogo.png')}
+            source={require('@/assets/images/whitelogo.png')}
             style={styles.logo}
         />
 
         <Text style={styles.tagline}>
-            Millions of songs. Free on Spotify.
+            Millions of songs.{"\n"}
+            Free on Spotify.
         </Text>
 
         <TouchableOpacity style={styles.signupButton}>
@@ -23,34 +34,34 @@ export default function SpotifyLogin() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#212121",
+    backgroundColor: "#121212",
     alignItems: "center",
     justifyContent: "center",
     padding: 20,
   },
   logo: {
-    width: 80,
-    height: 80,
-    marginBottom: 40,
-    tintColor: "#1DB954",
+    width: 70,
+    height: 70,
+    marginBottom: 10,
   },
   tagline: {
+    fontFamily: "CircularStdBold",
     color: "#fff",
-    fontSize: 18,
+    fontSize: 30,
     textAlign: "center",
     marginBottom: 40,
   },
   signupButton: {
     backgroundColor: "#1DB954",
-    paddingVertical: 15,
-    paddingHorizontal: 80,
+    paddingVertical: 13,
+    paddingHorizontal: 125,
     borderRadius: 25,
-    marginBottom: 20,
+    marginTop: 90,
   },
   signupText: {
-    color: "#fff",
+    color: "#121212",
+    fontFamily: "CircularStdBold",
     fontSize: 16,
-    fontWeight: "bold",
   },
   loginButton: {
     borderColor: "#fff",

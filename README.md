@@ -1,4 +1,6 @@
-**Activity 1: Development Environment Setup**
+# IT 5103 Advanced Mobile Software Development
+
+## Activity 1: Development Environment Setup
 
 Objective: Set up your React Native development environment.
 Instructions:

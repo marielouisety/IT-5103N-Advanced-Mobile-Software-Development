@@ -30,7 +30,7 @@ export default function ComponentShowcase() {
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
-      <Text style={styles.title}>Pinakabayot Test</Text>
+      <Text style={styles.title}>Fastest Fingers Test</Text>
 
       <Image
         source={require('../../assets/images/welcome-pic.png')}

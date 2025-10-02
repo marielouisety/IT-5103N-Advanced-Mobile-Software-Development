@@ -1,5 +1,12 @@
 # IT 5103 Advanced Mobile Software Development
 
+## Table of Contents
+
+1. [Activity 1: Development Environment Setup](#activity-1-development-environment-setup)
+2. [Activity 2: Component Scavenger Hunt](#activity-2-component-scavenger-hunt)
+
+---
+
 ## Activity 1: Development Environment Setup
 
 Objective: Set up your React Native development environment.
@@ -21,7 +28,9 @@ Final Output:
 
 <img width="421" height="912" alt="image" src="https://github.com/user-attachments/assets/d3f57588-a0be-4324-ab02-baa62d27af51" />
 
-**Activity 2: Component Scavenger Hunt**
+---
+
+## Activity 2: Component Scavenger Hunt
 
 Objective: Explore and use basic React Native components in a single app
 Instructions: 
@@ -37,4 +46,7 @@ Assessment Criteria:
 - app runs without errors (30%)
 
 Final Output:
+
+<img width="421" height="912" alt="image" src="https://github.com/user-attachments/assets/a15a52e1-837f-4c62-a6e0-ccc06d25ac35" />
+<img width="421" height="912" alt="image" src="https://github.com/user-attachments/assets/6eb98b4b-e6ca-4818-aa7b-3891dadb3415" />
 

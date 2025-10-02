@@ -48,11 +48,14 @@ export default function HomeScreen() {
 
       <ThemedView style={styles.stepContainer}>
         <ThemedText type="subtitle" style={{fontFamily: 'Poppins_700Bold'}}>
-            Activities
+            Other Activities
         </ThemedText>
         <View style={styles.linklist}>
             <Link href="/(tabs)/ComponentShowcase" style={styles.linkText}>
                 •   Activity 2: Components Showcase
+            </Link>
+            <Link href="/(tabs)/SpotifyUI" style={styles.linkText}>
+                •   Activity 3: Spotify UI
             </Link>
         </View>
       </ThemedView>

@@ -1,6 +1,6 @@
 # IT 5103 Advanced Mobile Software Development
 
-## Table of Contents
+## List of Activities
 
 1. [Activity 1: Development Environment Setup](#activity-1-development-environment-setup)
 2. [Activity 2: Component Scavenger Hunt](#activity-2-component-scavenger-hunt)
@@ -26,7 +26,7 @@ What challenges did you face during setup?
 
 Final Output:
 
-<img width="421" height="912" alt="image" src="https://github.com/user-attachments/assets/d3f57588-a0be-4324-ab02-baa62d27af51" />
+<img width="221" height="712" alt="image" src="https://github.com/user-attachments/assets/d3f57588-a0be-4324-ab02-baa62d27af51" />
 
 ---
 
@@ -47,6 +47,6 @@ Assessment Criteria:
 
 Final Output:
 
-<img width="421" height="912" alt="image" src="https://github.com/user-attachments/assets/a15a52e1-837f-4c62-a6e0-ccc06d25ac35" />
-<img width="421" height="912" alt="image" src="https://github.com/user-attachments/assets/6eb98b4b-e6ca-4818-aa7b-3891dadb3415" />
+<img width="221" height="712" alt="image" src="https://github.com/user-attachments/assets/a15a52e1-837f-4c62-a6e0-ccc06d25ac35" />
+<img width="221" height="712" alt="image" src="https://github.com/user-attachments/assets/6eb98b4b-e6ca-4818-aa7b-3891dadb3415" />
 

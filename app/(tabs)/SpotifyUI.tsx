@@ -14,19 +14,26 @@ export default function SpotifyLogin() {
 
     return (
         <View style={styles.container}>
-        <Image
-            source={require('@/assets/images/whitelogo.png')}
-            style={styles.logo}
-        />
+            <View style={styles.logoIntro}>
+            <Image
+                source={require('@/assets/images/whitelogo.png')}
+                style={styles.logo}
+            />
 
-        <Text style={styles.tagline}>
-            Millions of songs.{"\n"}
-            Free on Spotify.
-        </Text>
+            <Text style={styles.tagline}>
+                Millions of songs.{"\n"}
+                Free on Spotify.
+            </Text>
+            </View>
 
-        <TouchableOpacity style={styles.signupButton}>
-            <Text style={styles.signupText}>Sign Up Free</Text>
-        </TouchableOpacity>
+            <View style={styles.signLog}>
+                <TouchableOpacity style={styles.signupButton}>
+                    <Text style={styles.signupText}>Sign Up Free</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.logInButton}>
+                    <Text style={styles.logInText}>Log In</Text>
+                </TouchableOpacity>
+            </View>
         </View>
         );
     }
@@ -35,9 +42,12 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#121212",
-    alignItems: "center",
-    justifyContent: "center",
     padding: 20,
+  },
+  logoIntro: {
+      flex: 1,
+      justifyContent: "center",
+      alignItems: "center",
   },
   logo: {
     width: 70,
@@ -51,28 +61,33 @@ const styles = StyleSheet.create({
     textAlign: "center",
     marginBottom: 40,
   },
+  signLog: {
+      alignItems: "center",
+      marginBottom: 40,
+  },
   signupButton: {
     backgroundColor: "#1DB954",
     paddingVertical: 13,
     paddingHorizontal: 125,
     borderRadius: 25,
-    marginTop: 90,
+    marginBottom: 10,
   },
   signupText: {
     color: "#121212",
     fontFamily: "CircularStdBold",
     fontSize: 16,
   },
-  loginButton: {
-    borderColor: "#fff",
+  logInButton: {
+    borderColor: "#535353",
     borderWidth: 1,
-    paddingVertical: 15,
-    paddingHorizontal: 100,
+    paddingVertical: 13,
+    paddingHorizontal: 150,
     borderRadius: 25,
+    marginBottom: 40,
   },
-  loginText: {
+  logInText: {
     color: "#fff",
     fontSize: 16,
-    fontWeight: "bold",
+    fontFamily: "CircularStdBold",
   },
 });

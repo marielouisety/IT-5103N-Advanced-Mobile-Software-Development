@@ -26,7 +26,7 @@ What challenges did you face during setup?
 
 Final Output:
 
-<img width="221" height="712" alt="image" src="https://github.com/user-attachments/assets/d3f57588-a0be-4324-ab02-baa62d27af51" />
+<img width="421" height="912" alt="image" src="https://github.com/user-attachments/assets/d3f57588-a0be-4324-ab02-baa62d27af51" />
 
 ---
 

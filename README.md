@@ -4,6 +4,7 @@
 
 1. [Activity 1: Development Environment Setup](#activity-1-development-environment-setup)
 2. [Activity 2: Component Scavenger Hunt](#activity-2-component-scavenger-hunt)
+3. [Activity 3: Spotify Sign Up](#activity-3-spotify-sign-up)
 
 ---
 
@@ -49,4 +50,17 @@ Final Output:
 
 <img width="321" height="812" alt="image" src="https://github.com/user-attachments/assets/a15a52e1-837f-4c62-a6e0-ccc06d25ac35" />
 <img width="321" height="812" alt="image" src="https://github.com/user-attachments/assets/6eb98b4b-e6ca-4818-aa7b-3891dadb3415" />
+
+---
+
+## Activity 3: Spotify Sign Up
+
+Instructions:
+1. Code the UI design of Spotify's Sign Up page.
+
+Final Output: 
+
+<img width="321" height="812" alt="image" src="https://github.com/user-attachments/assets/a79ac72c-fa5c-4c3a-a09d-629e478338f3" />
+
+
 

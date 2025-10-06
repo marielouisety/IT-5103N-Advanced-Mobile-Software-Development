@@ -21,14 +21,30 @@ export default function SpotifyLogin() {
           style={styles.logo}
         />
         <Text style={styles.tagline}>
-          Millions of songs.{"\n"}Free on Spotify.
+          Sign up to start listening
         </Text>
       </View>
 
-      <View style={styles.signLog}>
-        <TouchableOpacity style={styles.signupButton}>
-          <Text style={styles.signupText}>Sign Up Free</Text>
+      <View style={styles.allOptions}>
+        <TouchableOpacity style={styles.email}>
+          <Text style={styles.emailText}>Continue with email</Text>
         </TouchableOpacity>
+        <TouchableOpacity style={styles.option}>
+          <Text style={styles.optionText}>Continue with Google</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.option}>
+          <Text style={styles.optionText}> Continue with Apple </Text>
+        </TouchableOpacity>
+      </View>
+
+      <Text style={styles.optionText}>
+            Already have an account?
+      </Text>
+
+      <View style={styles.logIn}>
+        <Text style={styles.textBold}>
+            Log in
+        </Text>
       </View>
     </View>
   );
@@ -39,17 +55,16 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#121212",
     padding: 20,
-    justifyContent: "space-between",
     alignItems: "center",
   },
   logoIntro: {
     alignItems: "center",
-    justifyContent: "center",
     flex: 1,
+    marginTop: 335,
   },
   logo: {
-    width: 70,
-    height: 70,
+    width: 80,
+    height: 80,
     marginBottom: 10,
   },
   tagline: {
@@ -59,20 +74,44 @@ const styles = StyleSheet.create({
     textAlign: "center",
     marginBottom: 40,
   },
-  signLog: {
+  allOptions: {
     alignItems: "center",
-    marginBottom: 40,
+    marginBottom: 27,
   },
-  signupButton: {
+  email: {
     backgroundColor: "#1DB954",
     paddingVertical: 13,
-    paddingHorizontal: 125,
+    paddingHorizontal: 100,
     borderRadius: 25,
-    marginBottom: 40,
+    marginBottom: 10,
   },
-  signupText: {
+  emailText: {
     color: "#121212",
     fontFamily: "CircularStdBold",
     fontSize: 16,
   },
-});
+  optionText: {
+    color: "#fff",
+    fontFamily: "CircularStdMedium",
+    fontSize: 16,
+  },
+  option: {
+    borderColor: "#535353",
+    borderWidth: 1,
+    paddingVertical: 13,
+    paddingHorizontal: 95,
+    borderRadius: 25,
+    marginBottom: 10,
+  },
+  logIn: {
+    alignItems: "center",
+    marginTop: 5,
+    marginBottom: 25,
+  },
+textBold: {
+    color: "#fff",
+    fontFamily: "CircularStdBold",
+    fontSize: 16,
+    marginTop: 10,
+  },
+  });

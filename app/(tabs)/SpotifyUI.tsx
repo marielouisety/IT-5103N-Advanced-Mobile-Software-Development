@@ -29,7 +29,7 @@ export default function SpotifyLogin() {
 
             <View style={styles.signLog}>
                 <TouchableOpacity style={styles.signupButton}
-                onPress={() => router.push("/SignUp")}>
+                onPress={() => router.push("/Sign Up")}>
                     <Text style={styles.signupText}>Sign Up Free</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.logInButton}>

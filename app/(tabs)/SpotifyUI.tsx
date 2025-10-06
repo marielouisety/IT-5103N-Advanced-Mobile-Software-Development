@@ -1,55 +1,93 @@
-import { FontAwesome } from "@expo/vector-icons";
-import { Tabs } from "expo-router";
 import React from "react";
-import { Platform } from "react-native";
-import { HapticTab } from "@/components/HapticTab";
-import TabBarBackground from "@/components/ui/TabBarBackground";
-import { Colors } from "@/constants/Colors";
-import { useColorScheme } from "@/hooks/useColorScheme";
+import { View, Text, StyleSheet, TouchableOpacity, Image } from "react-native";
+import { useFonts } from "expo-font";
 
-export default function TabLayout() {
-  const colorScheme = useColorScheme();
+export default function SpotifyLogin() {
+    const [fontsLoaded] = useFonts({
+        CircularStdMedium: require("@/assets/fonts/circular-std-medium-500.ttf"),
+        CircularStdBold: require("@/assets/fonts/circular-std-4.ttf"),
+    });
 
-  return (
-    <Tabs
-      screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? "light"].tint,
-        headerShown: false,
-        tabBarButton: HapticTab,
-        tabBarBackground: TabBarBackground,
-        tabBarStyle: Platform.select({
-          ios: { position: "absolute" },
-          default: {},
-        }),
-      }}
-    >
-      <Tabs.Screen
-        name="index"
-        options={{
-          title: "Introduction",
-          tabBarIcon: ({ color, size }) => (
-            <FontAwesome name="book" size={size} color={color} />
-          ),
-        }}
-      />
-      <Tabs.Screen
-        name="ComponentShowcase"
-        options={{
-          title: "Components Showcase",
-          tabBarIcon: ({ color, size }) => (
-            <FontAwesome name="cubes" size={size} color={color} />
-          ),
-        }}
-      />
-      <Tabs.Screen
-        name="SpotifyUI"
-        options={{
-          title: "Spotify UI",
-          tabBarIcon: ({ color, size }) => (
-            <FontAwesome name="spotify" size={size} color={color} />
-          ),
-        }}
-      />
-    </Tabs>
-  );
-}
+    if (!fontsLoaded) {
+        return null;
+    }
+
+    return (
+        <View style={styles.container}>
+            <View style={styles.logoIntro}>
+            <Image
+                source={require('@/assets/images/whitelogo.png')}
+                style={styles.logo}
+            />
+
+            <Text style={styles.tagline}>
+                Millions of songs.{"\n"}
+                Free on Spotify.
+            </Text>
+            </View>
+
+            <View style={styles.signLog}>
+                <TouchableOpacity style={styles.signupButton}>
+                    <Text style={styles.signupText}>Sign Up Free</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.logInButton}>
+                    <Text style={styles.logInText}>Log In</Text>
+                </TouchableOpacity>
+            </View>
+        </View>
+        );
+    }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "#121212",
+    padding: 20,
+  },
+  logoIntro: {
+      flex: 1,
+      justifyContent: "center",
+      alignItems: "center",
+  },
+  logo: {
+    width: 70,
+    height: 70,
+    marginBottom: 10,
+  },
+  tagline: {
+    fontFamily: "CircularStdBold",
+    color: "#fff",
+    fontSize: 30,
+    textAlign: "center",
+    marginBottom: 40,
+  },
+  signLog: {
+      alignItems: "center",
+      marginBottom: 40,
+  },
+  signupButton: {
+    backgroundColor: "#1DB954",
+    paddingVertical: 13,
+    paddingHorizontal: 125,
+    borderRadius: 25,
+    marginBottom: 10,
+  },
+  signupText: {
+    color: "#121212",
+    fontFamily: "CircularStdBold",
+    fontSize: 16,
+  },
+  logInButton: {
+    borderColor: "#535353",
+    borderWidth: 1,
+    paddingVertical: 13,
+    paddingHorizontal: 150,
+    borderRadius: 25,
+    marginBottom: 40,
+  },
+  logInText: {
+    color: "#fff",
+    fontSize: 16,
+    fontFamily: "CircularStdBold",
+  },
+});

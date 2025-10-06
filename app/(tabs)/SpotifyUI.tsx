@@ -1,6 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity, Image } from "react-native";
 import { useFonts } from "expo-font";
+import { router } from "expo-router";
 
 export default function SpotifyLogin() {
     const [fontsLoaded] = useFonts({
@@ -27,7 +28,8 @@ export default function SpotifyLogin() {
             </View>
 
             <View style={styles.signLog}>
-                <TouchableOpacity style={styles.signupButton}>
+                <TouchableOpacity style={styles.signupButton}
+                onPress={() => router.push("/SignUp")}>
                     <Text style={styles.signupText}>Sign Up Free</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.logInButton}>

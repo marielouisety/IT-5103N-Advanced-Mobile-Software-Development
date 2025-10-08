@@ -1,9 +1,11 @@
 import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity, Image } from "react-native";
 import { useFonts } from "expo-font";
-import { router } from "expo-router";
+import { useRouter } from "expo-router";
 
 export default function SpotifyLogin() {
+  const router = useRouter();
+
   const [fontsLoaded] = useFonts({
     CircularStdMedium: require("@/assets/fonts/circular-std-medium-500.ttf"),
     CircularStdBold: require("@/assets/fonts/circular-std-4.ttf"),
@@ -27,7 +29,13 @@ export default function SpotifyLogin() {
 
       <View style={styles.allOptions}>
         <TouchableOpacity style={styles.email}>
-          <Text style={styles.emailText}>Continue with email</Text>
+          <Text
+            style={styles.emailText}
+            onPress={() => router.push("/Sign Up with Email")}
+          >
+            Continue with email
+          </Text>
+
         </TouchableOpacity>
         <TouchableOpacity style={styles.option}>
           <Text style={styles.optionText}>Continue with Google</Text>

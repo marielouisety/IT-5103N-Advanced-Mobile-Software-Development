@@ -5,7 +5,8 @@
 1. [Activity 1: Development Environment Setup](#activity-1-development-environment-setup)
 2. [Activity 2: Component Scavenger Hunt](#activity-2-component-scavenger-hunt)
 3. [Activity 3: Spotify Sign Up](#activity-3-spotify-sign-up)
-4. [Week 4 State Management Activity 2: Spotify Playlist Builder App](week-4-state-management-activity-2-spotify-playlist-builder-app)
+4. [Week 4 Activity 1: Spotify Playlist Builder App](week-4-activity-1-spotify-playlist-builder-app)
+5. [Week 4 Activity 2: Spotify Profile Creation Form](week-4-activity-2-spotify-profile-creation-form)
 
 ---
 
@@ -63,10 +64,11 @@ Final Output:
 
 <img width="221" height="712" alt="image" src="https://github.com/user-attachments/assets/a79ac72c-fa5c-4c3a-a09d-629e478338f3" />
 <img width="221" height="712" alt="image" src="https://github.com/user-attachments/assets/49bfa876-5977-4880-a9d0-f1fee565b9ef" />
+<img width="421" height="912" alt="image" src="https://github.com/user-attachments/assets/8129369c-4073-4907-bf94-a02f5d2f57d3" />
 
 ---
 
-## Week 4 State Management Activity 2: Spotify Playlist Builder App
+## Week 4 Activity 1: Spotify Playlist Builder App
 
 Objective: Build a Spotify-inspired playlist creation app with song addition, state management, animations, and persistence.
 Instructions: 
@@ -82,3 +84,39 @@ Write a 3–4 sentence note explaining your state management approach and testin
 Submit code, screenshot, and note.
 
 Final Output:
+
+---
+
+## Week 4 Activity 2: Spotify Profile Creation Form
+
+Objective: Build a Spotify-inspired user profile creation form with real-time validation, animations, caching, and a dynamic profile preview section.
+Instructions:
+1. Build Profile Form with Enhanced Validation:
+Create a form with fields for Username, Email, and Favorite Genre using useState.
+Implement real-time validation on every input change:
+Username: 3–20 characters, alphanumeric and underscores only.
+Email: Must follow a valid email format (e.g., includes '@' and a domain).
+Genre: Must be selected from a predefined list (Pop, Rock, Jazz, Classical, Hip-Hop).
+Display error messages dynamically below each field.
+3. Add Animations:
+Use react-native-reanimated to add animations:
+Shake effect on input fields when validation fails.
+Fade-in effect for error messages and the profile preview section.
+Ensure animations are smooth and don’t impact performance.
+4. Implement Form Caching:
+Use AsyncStorage to cache form data (username, email, genre) for auto-fill on app reload.
+Clear the cache and reset the form upon successful submission (no backend API; submission only validates and clears cache).
+5. Build Dynamic Profile Preview (40 mins)
+Create a profile preview section that updates in real-time as the user types.
+Display the username, email, and genre in a styled card with a placeholder profile image that changes based on the selected genre (use placeholder URLs like https://via.placeholder.com/100?text=[Genre]).
+Add a fade-in animation to the preview section when data is entered using react-native-reanimated.
+Optimize re-renders of the preview section using React.memo.
+6. Documentation and Submission (30 mins)
+Capture a screenshot of the form with at least one error message and the profile preview visible.
+Write a 3–4 sentence note explaining your validation logic, animation approach, and how the preview updates.
+Submit code, screenshot, and note.
+
+Validation Logic, Animation, and Preview Update Note:
+Validation Logic: The form validates inputs in real-time: username (3–20 characters, alphanumeric and underscores), email (standard email format with '@' and domain), and genre (must be selected). Errors are displayed instantly below each field, with a shake animation triggered on invalid inputs.
+Animation Approach: react-native-reanimated is used for a shake effect on invalid inputs and a fade-in effect for the profile preview and error messages, ensuring smooth transitions with minimal performance impact.
+Preview Updates: The profile preview updates dynamically as the user types, showing the current username, email, and genre, with a genre-specific placeholder image that fades in when data is entered, optimized with React.memo to prevent unnecessary re-renders.

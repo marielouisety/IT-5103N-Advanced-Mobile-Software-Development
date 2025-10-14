@@ -31,7 +31,7 @@ export default function SpotifyLogin() {
         <TouchableOpacity style={styles.email}>
           <Text
             style={styles.emailText}
-            onPress={() => router.push("/Sign Up with Email")}
+            onPress={() => router.push("/Email")}
           >
             Continue with email
           </Text>

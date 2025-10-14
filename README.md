@@ -5,8 +5,8 @@
 1. [Activity 1: Development Environment Setup](#activity-1-development-environment-setup)
 2. [Activity 2: Component Scavenger Hunt](#activity-2-component-scavenger-hunt)
 3. [Activity 3: Spotify Sign Up](#activity-3-spotify-sign-up)
-4. [Week 4 Activity 1: Spotify Playlist Builder App](week-4-activity-1-spotify-playlist-builder-app)
-5. [Week 4 Activity 2: Spotify Profile Creation Form](week-4-activity-2-spotify-profile-creation-form)
+4. [Week 4 Activity 1: Spotify Playlist Builder App](#week-4-activity-1-spotify-playlist-builder-app)
+5. [Week 4 Activity 2: Spotify Profile Creation Form](#week-4-activity-2-spotify-profile-creation-form)
 
 ---
 
@@ -65,6 +65,8 @@ Final Output:
 <img width="221" height="712" alt="image" src="https://github.com/user-attachments/assets/a79ac72c-fa5c-4c3a-a09d-629e478338f3" />
 <img width="221" height="712" alt="image" src="https://github.com/user-attachments/assets/49bfa876-5977-4880-a9d0-f1fee565b9ef" />
 <img width="221" height="712" alt="image" src="https://github.com/user-attachments/assets/8129369c-4073-4907-bf94-a02f5d2f57d3" />
+<img width="221" height="712" alt="image" src="https://github.com/user-attachments/assets/225f08b8-99ee-4fdd-867c-8932e4987b8d" />
+
 
 ---
 
@@ -120,3 +122,6 @@ Validation Logic, Animation, and Preview Update Note:
 Validation Logic: The form validates inputs in real-time: username (3–20 characters, alphanumeric and underscores), email (standard email format with '@' and domain), and genre (must be selected). Errors are displayed instantly below each field, with a shake animation triggered on invalid inputs.
 Animation Approach: react-native-reanimated is used for a shake effect on invalid inputs and a fade-in effect for the profile preview and error messages, ensuring smooth transitions with minimal performance impact.
 Preview Updates: The profile preview updates dynamically as the user types, showing the current username, email, and genre, with a genre-specific placeholder image that fades in when data is entered, optimized with React.memo to prevent unnecessary re-renders.
+
+Final Output:
+

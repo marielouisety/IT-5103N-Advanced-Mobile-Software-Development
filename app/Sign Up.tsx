@@ -28,10 +28,10 @@ export default function SpotifyLogin() {
       </View>
 
       <View style={styles.allOptions}>
-        <TouchableOpacity style={styles.email}>
+        <TouchableOpacity style={styles.email}
+        onPress={() => router.push("/Email")}>
           <Text
             style={styles.emailText}
-            onPress={() => router.push("/Email")}
           >
             Continue with email
           </Text>

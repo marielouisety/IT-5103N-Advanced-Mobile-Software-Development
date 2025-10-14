@@ -174,7 +174,7 @@ const styles = StyleSheet.create({
     },
     genderRow: {
         flexDirection: "row",
-        justifyContent: "space-around",
+        justifyContent: "center",
         marginBottom: 25,
     },
     genderOption: {
@@ -183,6 +183,7 @@ const styles = StyleSheet.create({
         borderRadius: 25,
         paddingVertical: 10,
         paddingHorizontal: 30,
+        marginHorizontal: 20,
     },
     genderSelected: {
         borderColor: "#1DB954",

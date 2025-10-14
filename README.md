@@ -64,7 +64,7 @@ Final Output:
 
 <img width="221" height="712" alt="image" src="https://github.com/user-attachments/assets/a79ac72c-fa5c-4c3a-a09d-629e478338f3" />
 <img width="221" height="712" alt="image" src="https://github.com/user-attachments/assets/49bfa876-5977-4880-a9d0-f1fee565b9ef" />
-<img width="421" height="912" alt="image" src="https://github.com/user-attachments/assets/8129369c-4073-4907-bf94-a02f5d2f57d3" />
+<img width="221" height="712" alt="image" src="https://github.com/user-attachments/assets/8129369c-4073-4907-bf94-a02f5d2f57d3" />
 
 ---
 

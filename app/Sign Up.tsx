@@ -29,7 +29,7 @@ export default function SpotifyLogin() {
 
       <View style={styles.allOptions}>
         <TouchableOpacity style={styles.email}
-        onPress={() => router.push("/Email")}>
+          onPress={() => router.push("/Email")}>
           <Text
             style={styles.emailText}
           >
@@ -116,7 +116,7 @@ const styles = StyleSheet.create({
     marginTop: 5,
     marginBottom: 25,
   },
-textBold: {
+  textBold: {
     color: "#fff",
     fontFamily: "CircularStdBold",
     fontSize: 16,

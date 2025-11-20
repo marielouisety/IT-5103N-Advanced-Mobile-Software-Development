@@ -89,6 +89,15 @@ Instructions:
 
 Final Output:
 
+<img width="221" height="712" alt="image" src="https://github.com/user-attachments/assets/24bbb821-075a-475d-a9d4-3913d057d33e" />
+<img width="221" height="712" alt="image" src="https://github.com/user-attachments/assets/a0d1cafd-b200-43ea-bc05-3550a154950e" />
+<img width="221" height="712" alt="image" src="https://github.com/user-attachments/assets/21a9229e-d3cc-4f7f-8a97-e85f9473cc08" />
+<img width="221" height="712" alt="image" src="https://github.com/user-attachments/assets/64568e99-6bff-497b-a342-5ae4f6d4705f" />
+
+<br>
+
+For this activity, I used a reducer-based state management approach to keep playlist data predictable, centralized, and easy to update through clearly defined actions such as adding, loading, and deleting playlists. All playlist changes automatically persist to AsyncStorage, ensuring the UI stays in sync with saved data. I tested each feature incrementally by verifying that new playlists rendered correctly, swipe-to-delete triggered the right reducer action, and saved data reloaded properly on app restart. Additionally, I checked for UI stability by adding and removing multiple items to ensure no render or state errors occurred.
+
 ---
 
 ## Week 4 Activity 2: Spotify Profile Creation Form

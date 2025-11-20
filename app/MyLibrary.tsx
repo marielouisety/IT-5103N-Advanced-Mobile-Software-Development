@@ -1,37 +1,13 @@
 import React, { useEffect, useState, useReducer } from "react";
-import { View, Text, Image, TouchableOpacity, FlatList, StyleSheet, TextInput } from "react-native";
+import { View, Text, Image, TouchableOpacity, StyleSheet, TextInput, FlatList } from "react-native";
 import { useFonts } from "expo-font";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useRouter } from "expo-router";
+import { Swipeable } from "react-native-gesture-handler";
 import Animated, { FadeInDown, FadeOutUp } from "react-native-reanimated";
 import { Ionicons } from "@expo/vector-icons";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
 
-const defaultPlaylists = [
-    {
-        id: "1",
-        name: "mentally clubbing",
-        cover: "https://picsum.photos/seed/club/200",
-        owner: "Marie Louise",
-    },
-    {
-        id: "2",
-        name: "flirtatious",
-        cover: "https://picsum.photos/seed/flirt/200",
-        owner: "Marie Louise",
-    },
-    {
-        id: "3",
-        name: "let things be",
-        cover: "https://picsum.photos/seed/letbe/200",
-        owner: "Marie Louise",
-    },
-    {
-        id: "4",
-        name: "girlboss mentality",
-        cover: "https://picsum.photos/seed/girlboss/200",
-        owner: "Marie Louise",
-    },
-];
 
 const initialState = {
     playlists: [],
@@ -85,7 +61,7 @@ export default function MyLibrary() {
             if (saved) {
                 dispatch({ type: "LOAD_DATA", payload: JSON.parse(saved) });
             } else {
-                dispatch({ type: "LOAD_DATA", payload: { playlists: defaultPlaylists } });
+                dispatch({ type: "LOAD_DATA", payload: { playlists: [] } });
             }
         };
         load();
@@ -103,6 +79,7 @@ export default function MyLibrary() {
     };
 
     return (
+        <GestureHandlerRootView style={{ flex: 1 }}>
         <View style={styles.container}>
             <Text style={styles.title}>My Library</Text>
 
@@ -125,38 +102,41 @@ export default function MyLibrary() {
             <FlatList
                 data={state.playlists}
                 keyExtractor={(item) => item.id}
-                contentContainerStyle={{ paddingTop: 10, paddingBottom: 50 }}
+                contentContainerStyle={{ paddingBottom: 50 }}
                 renderItem={({ item }) => (
-                    <Animated.View
-                        style={styles.row}
-                        entering={FadeInDown}
-                        exiting={FadeOutUp}
-                    >
-                        <TouchableOpacity
-                            style={styles.rowLeft}
-                            onPress={() => router.push(`/playlist/${item.id}`)}
-                        >
-                            <Image source={{ uri: item.cover }} style={styles.cover} />
-
-                            <View>
-                                <Text style={styles.name}>{item.name}</Text>
-                                <Text style={styles.subtitle}>
-                                    Playlist · {item.owner}
-                                </Text>
+                    <Swipeable
+                        renderRightActions={() => (
+                            <View style={styles.deleteBox}>
+                                <Ionicons name="trash-outline" size={28} color="white" />
                             </View>
-                        </TouchableOpacity>
+                        )}
+                        onSwipeableOpen={() =>
+                            dispatch({ type: "DELETE_PLAYLIST", payload: item.id })
+                        }
+                    >
 
-                        <TouchableOpacity
-                            onPress={() =>
-                                dispatch({ type: "DELETE_PLAYLIST", payload: item.id })
-                            }
+                        <Animated.View
+                            style={styles.row}
+                            entering={FadeInDown}
+                            exiting={FadeOutUp}
                         >
-                            <Ionicons name="trash-outline" size={24} color="#F55" />
-                        </TouchableOpacity>
-                    </Animated.View>
+                            <TouchableOpacity
+                                style={styles.rowLeft}
+                                onPress={() => router.push(`/playlist/${item.id}`)}
+                            >
+                                <Image source={{ uri: item.cover }} style={styles.cover} />
+
+                                <View>
+                                    <Text style={styles.name}>{item.name}</Text>
+                                    <Text style={styles.subtitle}>Playlist · {item.owner}</Text>
+                                </View>
+                            </TouchableOpacity>
+                        </Animated.View>
+                    </Swipeable>
                 )}
             />
         </View>
+        </GestureHandlerRootView>
     );
 }
 
@@ -195,6 +175,14 @@ const styles = StyleSheet.create({
         color: "white",
         fontFamily: "CircularStdBold",
         fontSize: 16,
+    },
+    deleteBox: {
+        backgroundColor: "#E63946",
+        justifyContent: "center",
+        alignItems: "center",
+        width: 80,
+        height: "100%",
+        borderRadius: 10,
     },
     row: {
         flexDirection: "row",

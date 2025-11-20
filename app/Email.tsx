@@ -109,7 +109,7 @@ export default function SignUpWithEmail() {
                 </View>
 
                 <TouchableOpacity style={styles.signUpButton}
-                  onPress={() => router.replace("/Home")}>
+                  onPress={() => router.replace("/Playlists")}>
                   <Text style={styles.signUpText}>Sign Up</Text>
                 </TouchableOpacity>
 

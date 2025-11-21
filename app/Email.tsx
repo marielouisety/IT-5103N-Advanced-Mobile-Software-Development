@@ -37,6 +37,8 @@ export default function SignUpWithEmail() {
         if (field === "name") {
             if (!value.trim()) msg = "Username is required.";
             else if (value.trim().length < 3) msg = "Username must be at least 3 characters.";
+            else if (!/^[A-Za-z0-9_]+$/.test(value))
+                msg = "Only letters, numbers and underscores allowed.";
         }
 
         setErrors((prev) => ({ ...prev, [field]: msg }));

@@ -145,11 +145,11 @@ export default function ProfileForm() {
             style={{ flex: 1 }}
         >
         <ScrollView contentContainerStyle={styles.container}>
-            <Text style={styles.header}>Create your profile</Text>
+            <Text style={styles.header}>Edit your profile</Text>
             <Text style={styles.label}>Username</Text>
             <TextInput
                 style={[styles.input, userError ? styles.inputError : null]}
-                placeholder="Enter username"
+                placeholder="New username"
                 placeholderTextColor="#999"
                 value={username}
                 onChangeText={setUsername}
@@ -160,7 +160,7 @@ export default function ProfileForm() {
             <Text style={styles.label}>Email</Text>
             <TextInput
                 style={[styles.input, emailError ? styles.inputError : null]}
-                placeholder="you@example.com"
+                placeholder="New email"
                 placeholderTextColor="#999"
                 value={email}
                 onChangeText={setEmail}
@@ -231,14 +231,13 @@ const styles = StyleSheet.create({
     genreRow: {
         flexDirection: "row",
         flexWrap: "wrap",
-        gap: 10,
-        marginBottom: 8,
+        gap: 1,
     },
     genreItem: {
         borderWidth: 1,
         borderColor: "#333",
         paddingVertical: 8,
-        paddingHorizontal: 12,
+        paddingHorizontal: 15,
         borderRadius: 20,
         marginRight: 8,
         marginBottom: 8,

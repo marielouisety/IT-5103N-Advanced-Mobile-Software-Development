@@ -25,7 +25,7 @@ export default function Profile() {
 
     return (
         <View style={styles.container}>
-            <Text style={styles.title}>Your Profile</Text>
+            <Text style={styles.title}>My Profile</Text>
 
             {!profile ? (
                 <Text style={styles.emptyText}>No profile data found.</Text>

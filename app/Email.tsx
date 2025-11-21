@@ -31,11 +31,11 @@ export default function SignUpWithEmail() {
         let msg = "";
         if (field === "email") {
             if (!value.trim()) msg = "Email is required.";
-            else if (!value.includes("@") || !value.includes(".")) msg = "Enter a valid email.";
+            else if (value.includes("@") || !value.includes(".")) msg = "Enter a valid email.";
         }
 
         if (field === "name") {
-            if (!value.trim()) msg = "Name is required.";
+            if (!value.trim()) msg = "Username is required.";
             else if (!value.trim().length < 3) msg = "Username must be at least 3 characters.";
         }
 
@@ -62,11 +62,11 @@ export default function SignUpWithEmail() {
                     value={form.email}
                     onChangeText={(email) => {
                         setForm({ ...form, email });
-                        if (errors.email) validateField("email", email);
+                        if (errors.email) validateForm("email", email);
                     }}
-                    onBlur = {() => validateField("email", form.email)}
+                    onBlur = {() => validateForm("email", form.email)}
                 />
-                {errors.email} ? (
+                {errors.email ? (
                     <Text style={styles.errorText}>{errors.email}</Text>
                 ) : null }
 
@@ -77,9 +77,9 @@ export default function SignUpWithEmail() {
                     value={form.name}
                     onChangeText={(name) => {
                         setForm({ ...form, name });
-                        if (errors.name) validateField("name", name);
+                        if (errors.name) validateForm("email", form.email);
                     }}
-                    onBlur={() => validateField("name", form.name)}
+                    onBlur={() => validateForm("name", form.name)}
                 />
                 {errors.name ? (
                     <Text style={styles.errorText}>{errors.name}</Text>
@@ -256,5 +256,17 @@ const styles = StyleSheet.create({
     logInLink: {
         color: "#1DB954",
         fontFamily: "CircularStdBold",
+    },
+    inputError: {
+        borderColor: "#ff4d4d",
+        borderWidth: 1,
+    },
+    errorText: {
+        color: "#ff4d4d",
+        marginTop: -10,
+        marginBottom: 10,
+        marginLeft: 5,
+        fontFamily: "CircularStdMedium",
+        fontSize: 13,
     },
 });

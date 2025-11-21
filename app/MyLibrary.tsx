@@ -81,7 +81,13 @@ export default function MyLibrary() {
     return (
         <GestureHandlerRootView style={{ flex: 1 }}>
         <View style={styles.container}>
-            <Text style={styles.title}>My Library</Text>
+            <View style={styles.header}>
+                <Text style={styles.title}>My Library</Text>
+
+                <TouchableOpacity onPress={() => router.push("/Profile")}>
+                    <Ionicons name="person-circle-outline" size={34} color="#fff" />
+                </TouchableOpacity>
+            </View>
 
             {/* Add playlist input */}
             <View style={styles.addRow}>
@@ -145,6 +151,12 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: "#000",
         padding: 20,
+    },
+    header: {
+        flexDirection: "row",
+        alignItems: "center",
+        justifyContent: "space-between",
+        marginBottom: 20,
     },
     title: {
         fontSize: 32,

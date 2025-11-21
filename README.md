@@ -9,7 +9,8 @@
 5. [Week 4 Activity 2: Spotify Profile Creation Form](#week-4-activity-2-spotify-profile-creation-form)
 6. [Week 5 Activity 1: Theme Switcher](#week-5-activity-1-theme-switcher)
 7. [Week 5 Activity 2: Camera with Filters](#week-5-activity-2-camera-with-filters)
-8. [Week 6 Activity 1: Building and Deploying Your Spotify-Inspired React Native App for iOS (Without Expo)](#week-6-activity-1-building-and-deploying-your-spotify-inspired-react-native-app-for-iOS-without-expo)
+8. [Week 6 Activity 1: Building and Deploying Your Spotify-Inspired React Native App for iOS (Without Expo)](#week-6-activity-1-building-and-deploying-your-spotify-inspired-react-native-app-for-ios-without-expo)
+9. [Week 6 Activity 2: Enhancing Your React Native App with Location-Based Map Features](#week-6-activity-2-enhancing-your-react-native-app-with-location-based-map-features)
 
 ---
 
@@ -250,7 +251,7 @@ Tip: This might take 5-10 minutes the first time. If errors (e.g., Ruby issues),
 **Verify Setup:** <br>
 Run npx react-native doctor to check for issues. Fix any red flags (e.g., missing SDKs).
 
-**Step 2: Prepare Your Project for iOS (10-15 minutes)** <br>
+**Step 2: Prepare Your Project for iOS** <br>
 Your Android project should mostly work on iOS, but let's sync it.
 
 
@@ -351,3 +352,27 @@ Slow build: Close other apps; use npx react-native run-ios --device from termina
 **Debug & Polish:** Spend 5 minutes fixing any iOS bugs (e.g., dark mode support for Spotify vibe).
 **Cross-Platform Check:** Run npx react-native run-android to ensure Android still works.
 **Submit:** Push changes to GitHub. Include a screenshot/video of the app running on iOS simulator/device + a 1-paragraph reflection (e.g., "What iOS-specific changes did you make?").
+
+Final Output:
+
+---
+
+## Week 6 Activity 2: Enhancing Your React Native App with Location-Based Map Features
+
+Objective: Extend your existing React Native app to include real-time location tracking and interactive map features using react-native-geolocation-service and react-native-maps. <br>
+Instructions:
+1. **Integrate Map into Existing App** <br>
+Add react-native-geolocation-service and react-native-maps to your current React Native project to display the user's real-time location on a map.
+Incorporate custom markers for at least three mock points of interest (e.g., nearby landmarks or virtual checkpoints) relevant to your app’s theme.
+2. **Enhance with Map Controls and Geofencing** <br>
+Add zoom and pan controls to your map for better user interaction.
+Implement geofencing to trigger alerts when the user enters or leaves predefined mock regions (e.g., a 100-meter radius around a marker) using react-native-geolocation-service for location monitoring.
+3. **Customize Map Appearance** <br>
+Apply a custom map style (e.g., dark mode, retro, or high-contrast theme) to enhance your app’s visual design. Use a JSON style configuration compatible with react-native-maps (e.g., from Mapbox or similar providers).
+4. **Test Cross-Platform** <br>
+Test location tracking, map controls, and geofencing functionality on both iOS and Android devices.
+Verify performance across different device types (e.g., phone and tablet) to ensure responsiveness.
+5. **Documentation and Submission** <br>
+Capture a screenshot of your map displaying markers and the custom style.
+Write a brief note (3–4 sentences) describing the implemented map features and any challenges faced.
+Submit your updated code, screenshot, and note.

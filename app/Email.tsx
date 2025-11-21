@@ -31,12 +31,12 @@ export default function SignUpWithEmail() {
         let msg = "";
         if (field === "email") {
             if (!value.trim()) msg = "Email is required.";
-            else if (value.includes("@") || !value.includes(".")) msg = "Enter a valid email.";
+            else if (!value.includes("@") && !value.includes(".")) msg = "Enter a valid email.";
         }
 
         if (field === "name") {
             if (!value.trim()) msg = "Username is required.";
-            else if (!value.trim().length < 3) msg = "Username must be at least 3 characters.";
+            else if (value.trim().length < 3) msg = "Username must be at least 3 characters.";
         }
 
         setErrors((prev) => ({ ...prev, [field]: msg }));

@@ -7,6 +7,10 @@
 3. [Activity 3: Spotify Sign Up](#activity-3-spotify-sign-up)
 4. [Week 4 Activity 1: Spotify Playlist Builder App](#week-4-activity-1-spotify-playlist-builder-app)
 5. [Week 4 Activity 2: Spotify Profile Creation Form](#week-4-activity-2-spotify-profile-creation-form)
+6. [Week 5 Activity 1: Theme Switcher](#week-5-activity-1-theme-switcher)
+7. [Week 5 Activity 2: Camera with Filters](#week-5-activity-2-camera-with-filters)
+8. [Week 6 Activity 1: Building and Deploying Your Spotify-Inspired React Native App for iOS (Without Expo)](#week-6-activity-1-building-and-deploying-your-spotify-inspired-react-native-app-for-ios-without-expo)
+9. [Week 6 Activity 2: Enhancing Your React Native App with Location-Based Map Features](#week-6-activity-2-enhancing-your-react-native-app-with-location-based-map-features)
 
 ---
 
@@ -89,6 +93,15 @@ Instructions:
 
 Final Output:
 
+<img width="221" height="712" alt="image" src="https://github.com/user-attachments/assets/24bbb821-075a-475d-a9d4-3913d057d33e" />
+<img width="221" height="712" alt="image" src="https://github.com/user-attachments/assets/a0d1cafd-b200-43ea-bc05-3550a154950e" />
+<img width="221" height="712" alt="image" src="https://github.com/user-attachments/assets/21a9229e-d3cc-4f7f-8a97-e85f9473cc08" />
+<img width="221" height="712" alt="image" src="https://github.com/user-attachments/assets/64568e99-6bff-497b-a342-5ae4f6d4705f" />
+
+<br>
+
+For this activity, I used a reducer-based state management approach to keep playlist data predictable, centralized, and easy to update through clearly defined actions such as adding, loading, and deleting playlists. All playlist changes automatically persist to AsyncStorage, ensuring the UI stays in sync with saved data. I tested each feature incrementally by verifying that new playlists rendered correctly, swipe-to-delete triggered the right reducer action, and saved data reloaded properly on app restart. Additionally, I checked for UI stability by adding and removing multiple items to ensure no render or state errors occurred.
+
 ---
 
 ## Week 4 Activity 2: Spotify Profile Creation Form
@@ -126,3 +139,240 @@ Validation Logic, Animation, and Preview Update Note: <br>
 
 Final Output:
 
+---
+
+## Week 5 Activity 1: Theme Switcher
+
+Objective: Implement a theme toggle with Redux, animations, and custom options. <br>
+Instructions:
+1. **Set Up Redux Store** <br>
+   - Create a Redux store for light/dark mode using Redux Toolkit.  
+   - Apply to Week 2 Spotify app’s UI.
+
+2. **Add Animated Transitions** <br>
+   - Implement animated theme transitions (e.g., fade or color interpolation) using react-native-reanimated.  
+   - Ensure smooth UI updates across screens.
+
+3. **Add Custom Theme Options** <br>
+   - Implement a color picker for custom theme accents (e.g., button colors).  
+   - Allow at least three preset themes (light, dark, custom).
+
+4. **Persist Theme** <br>
+   - Save theme settings with AsyncStorage.  
+   - Restore on app reload.
+
+5. **Documentation and Submission** <br>
+   - Capture screenshots of light, dark, and custom themes.  
+   - Write a 3–4 sentence note on theme implementation.  
+   - Submit code, screenshots, and note.
+  
+Final Output: 
+
+---
+
+## Week 5 Activity 2: Camera with Filters
+
+Objective: Integrate a camera with real-time filters and editing tools. <br>
+Instructions:
+1. **Set Up Camera**  
+   - Use expo-camera to capture photos.  
+   - Implement a camera UI with capture and toggle buttons.
+
+2. **Apply Filters**  
+   - Add real-time grayscale and sepia filters using expo-gl or shaders.  
+   - Allow filter switching during preview.
+
+3. **Add Editing Tools**  
+   - Implement crop and rotate tools for captured photos.  
+   - Save edited photos locally.
+
+4. **Add Filter Intensity Sliders**  
+   - Add sliders to adjust filter intensity (e.g., grayscale opacity).  
+   - Ensure smooth real-time updates.
+
+5. **Test and Optimize**  
+   - Test on iOS and Android for camera and filter performance.  
+   - Optimize rendering with React.memo for filter previews.
+
+6. **Documentation and Submission**  
+   - Capture a screenshot of the camera with filters applied.  
+   - Write a 3–4 sentence note on camera functionality.  
+   - Submit code, screenshot, and note.
+  
+Final Output:
+
+---
+
+## Week 6 Activity 1: Building and Deploying Your Spotify-Inspired React Native App for iOS (Without Expo)
+
+Objective: In this week's activity, you'll take the simple Spotify-inspired app you built last time (e.g., with features like a playlist view, search bar, and basic audio playback mockup) and adapt it to run on iOS. We'll focus on using React Native's native tooling to build and deploy the iOS version of your existing project. This will help you understand platform-specific differences (like navigation or UI tweaks for iOS) while reusing most of your Android code. By the end, you'll deploy and test the app on an iOS simulator and (optionally) a physical iOS device.
+
+Prerequisites:
+
+A Mac computer (iOS builds require Xcode, which is Mac-only).
+Your existing React Native project from the Android activity (cloned from GitHub or local). If using VS Code, that's fine—continue with it. Android Studio isn't needed for iOS.
+Node.js (v16+), Yarn or npm, and Watchman installed (from last week's setup).
+Basic familiarity with your app's code (e.g., any Android-specific imports like react-native-vector-icons might need iOS config).
+For physical device deployment: An iPhone/iPad (iOS 12+), USB cable, and a free Apple ID (yes, you'll need to create one if you don't have it—more on this below).
+
+Do You Need an Apple ID?
+Yes, for deploying to a physical iOS device (not just the simulator). It's free and quick to create at appleid.apple.com. You'll use it to sign the app with a development provisioning profile. Simulator testing doesn't require it, so start there to save time.
+
+Detailed Steps:
+Follow these steps in order. I'll note time estimates and tips for common issues. Open your terminal (in VS Code or standalone) and navigate to your project root (e.g., cd my-spotify-app).
+
+**Step 1: Set Up Your Mac for React Native iOS Development** <br>
+This ensures your environment is ready. If you've done Android setup, this is similar but iOS-focused.
+
+**Install Xcode:** <br>
+Open the App Store on your Mac and search for "Xcode" (free, ~12-15 GB—download if not installed).
+Once installed, open Xcode > Preferences > Locations > Command Line Tools, and select the latest version (e.g., Xcode 16.x).
+Install iOS Simulator: In Xcode, go to Preferences > Platforms, and download the latest iOS simulator (e.g., iOS 18).
+Tip: If download is slow, do this overnight before class.
+
+**Install React Native CLI (if not already):** <br>
+text
+npm install -g @react-native-community/cli
+
+Tip: If you get permission errors, use sudo or fix npm permissions.
+
+**Install CocoaPods (iOS dependency manager):** <br>
+CocoaPods handles native iOS libraries in your RN project.
+text
+sudo gem install cocoapods
+
+Then, in your project root:
+text
+cd ios && pod install && cd ..
+
+
+Tip: This might take 5-10 minutes the first time. If errors (e.g., Ruby issues), run sudo gem update --system first.
+
+**Verify Setup:** <br>
+Run npx react-native doctor to check for issues. Fix any red flags (e.g., missing SDKs).
+
+**Step 2: Prepare Your Project for iOS** <br>
+Your Android project should mostly work on iOS, but let's sync it.
+
+
+**Clean and Reset:** <br>
+If you made Android-only changes, clean up:
+text
+npx react-native clean
+cd ios && rm -rf Pods Podfile.lock && pod install && cd ..
+
+
+**Platform-Specific Tweaks (if needed):** <br>
+
+Open ios/YourApp.xcworkspace in Xcode (not .xcodeproj—always use the workspace after pod install).
+In Xcode: Select your project > Runner (under Targets) > Build Settings > Search for "Deployment Target" and set to iOS 12.0+.
+If your app uses fonts/icons (e.g., for Spotify-like UI): Add them to ios/YourApp/Info.plist under UIAppFonts.
+Test for iOS incompatibilities: Run npx react-native run-ios (it'll fail gracefully and show errors). Common fixes:
+For navigation (e.g., React Navigation): Ensure iOS-specific styles (e.g., safe area insets).
+For audio (if you mocked Spotify playback): Use react-native-sound and link it via pods.
+
+
+Example Code Tweak (in App.js or screens):
+Add iOS detection for UI adjustments:
+jsx
+import { Platform } from 'react-native';
+
+// In your component:
+const isIOS = Platform.OS === 'ios';
+<View style={{ paddingTop: isIOS ? 20 : 0 }}> {/* Extra top padding for iOS notch */ }
+
+
+**Step 3: Build and Run on iOS Simulator** <br>
+No device needed—great for quick testing.
+
+
+**Start Metro Bundler:** <br>
+In a new terminal tab (project root):
+text
+npx react-native start
+
+
+**Run the App:** <br>
+In another terminal:
+text
+npx react-native run-ios
+
+This builds the app, installs it on the simulator, and launches it.
+Select a simulator if prompted (e.g., iPhone 15).
+
+
+**Test Core Features:** <br>
+
+Swipe through playlists, search tracks, play a mock song.
+Note iOS differences: Gestures feel smoother; adjust any Android-specific touch handlers.
+Hot reload: Shake the simulator (Cmd+D) > Enable Live Reload.
+
+Tip: If build fails (e.g., "No bundle URL"), reset simulator: Device > Erase All Content and Settings.
+
+
+**Step 4: Deploy to Physical iOS Device** <br>
+This is the "real" deployment—signing and installing on your phone.
+
+
+**Create/Sign In to Apple ID:** <br>
+
+Go to appleid.apple.com > Create if needed (use a real email; verify via phone).
+In Xcode: Xcode > Preferences > Accounts > Add Apple ID > Sign in.
+
+
+**Set Up Provisioning:** <br>
+
+Connect your iPhone via USB (trust the computer if prompted).
+In Xcode: Window > Devices and Simulators > Select your device > If not registered, Xcode will prompt to register.
+Back in project: Open ios/YourApp.xcworkspace > Select Runner target > Signing & Capabilities tab:
+Check "Automatically manage signing."
+Select your Apple ID team (it'll create a free developer cert).
+Bundle Identifier: Set to something unique like com.yourname.spotifymock (match your Android one if possible).
+
+
+**Build and Install:** <br>
+
+Ensure your iPhone is selected as the target (top-left dropdown in Xcode).
+Click the Play button (▶️) or Cmd+R to build/run.
+Xcode will compile (~2-5 minutes first time), sign, and install on your device. Approve any on-device prompts.
+
+
+**Test on Device:** <br>
+
+Open the app on your iPhone. Test full features (e.g., orientation changes).
+For sharing: The app stays installed until you delete it; no App Store needed for personal dev.
+
+Tip: Common issues:
+
+"Code signing error": Double-check Apple ID and bundle ID. Revoke/recreate cert in developer.apple.com if stuck.
+Slow build: Close other apps; use npx react-native run-ios --device from terminal for faster iteration.
+
+
+**Step 5: Wrap-Up and Submission** <br>
+**Debug & Polish:** Spend 5 minutes fixing any iOS bugs (e.g., dark mode support for Spotify vibe).
+**Cross-Platform Check:** Run npx react-native run-android to ensure Android still works.
+**Submit:** Push changes to GitHub. Include a screenshot/video of the app running on iOS simulator/device + a 1-paragraph reflection (e.g., "What iOS-specific changes did you make?").
+
+Final Output:
+
+---
+
+## Week 6 Activity 2: Enhancing Your React Native App with Location-Based Map Features
+
+Objective: Extend your existing React Native app to include real-time location tracking and interactive map features using react-native-geolocation-service and react-native-maps. <br>
+Instructions:
+1. **Integrate Map into Existing App** <br>
+Add react-native-geolocation-service and react-native-maps to your current React Native project to display the user's real-time location on a map.
+Incorporate custom markers for at least three mock points of interest (e.g., nearby landmarks or virtual checkpoints) relevant to your app’s theme.
+2. **Enhance with Map Controls and Geofencing** <br>
+Add zoom and pan controls to your map for better user interaction.
+Implement geofencing to trigger alerts when the user enters or leaves predefined mock regions (e.g., a 100-meter radius around a marker) using react-native-geolocation-service for location monitoring.
+3. **Customize Map Appearance** <br>
+Apply a custom map style (e.g., dark mode, retro, or high-contrast theme) to enhance your app’s visual design. Use a JSON style configuration compatible with react-native-maps (e.g., from Mapbox or similar providers).
+4. **Test Cross-Platform** <br>
+Test location tracking, map controls, and geofencing functionality on both iOS and Android devices.
+Verify performance across different device types (e.g., phone and tablet) to ensure responsiveness.
+5. **Documentation and Submission** <br>
+Capture a screenshot of your map displaying markers and the custom style.
+Write a brief note (3–4 sentences) describing the implemented map features and any challenges faced.
+Submit your updated code, screenshot, and note.
